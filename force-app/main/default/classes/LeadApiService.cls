@@ -29,6 +29,7 @@ public class LeadApiService {
     public static HttpResponse updateLeadPartial(String leadId, String leadJson) {
         setInstanceUrlAndToken();
         HttpRequest req = new HttpRequest();
+        
         req.setEndpoint(Base_Url + leadId);
         req.setMethod('PATCH');
         req.setHeader('Authorization', 'Bearer ' + authToken);
